@@ -1,5 +1,6 @@
 "use client";
 
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 
 const page = () => {
@@ -15,7 +16,9 @@ const page = () => {
           <Link href="/profile">
             <li>Profile</li>
           </Link>
-          <li>Login</li>
+          <li>
+            <LoginLink>Login</LoginLink>
+          </li>
         </ul>
       </div>
     </nav>

@@ -18,15 +18,12 @@ export default async function Home() {
           >
             {/* Blog Title */}
             <div className="p-4 h-full flex flex-col justify-between">
-              <h2 className="text-xl font-semibold text-gray-800 truncate">
-                {blog.title}
-              </h2>
-
               {/* View Details Button */}
-              <Link href={`/blog/${blog.id}`} className="  text-center">
-                <button className="px-4 py-2 bg-black text-white rounded-md">
-                  View Details
-                </button>
+              <Link
+                href={`/blog/${blog.id}`}
+                className=" text-black rounded-md text-center"
+              >
+                {blog.title}
               </Link>
             </div>
           </div>
