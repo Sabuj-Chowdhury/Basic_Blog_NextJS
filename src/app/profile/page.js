@@ -1,7 +1,4 @@
-import {
-  getKindeServerSession,
-  LoginLink,
-} from "@kinde-oss/kinde-auth-nextjs/server";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 import { redirect } from "next/navigation";
 
@@ -11,7 +8,7 @@ export default async function ProfilePage() {
 
   console.log(user);
   if (!user) {
-    redirect(<LoginLink></LoginLink>);
+    redirect("/login");
   }
 
   return (
