@@ -1,11 +1,23 @@
-import React from "react";
+import {
+  getKindeServerSession,
+  LoginLink,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
-const page = () => {
+import { redirect } from "next/navigation";
+
+export default async function ProfilePage() {
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+
+  console.log(user);
+  if (!user) {
+    redirect(<LoginLink></LoginLink>);
+  }
+
   return (
     <div>
-      <h1>profile page</h1>
+      <h1>Welcome, {user.family_name || user.username}!</h1>
+      <p>This is your profile page.</p>
     </div>
   );
-};
-
-export default page;
+}

@@ -2,9 +2,7 @@ import Link from "next/link";
 import { getAllBlogs } from "../../utils/getAllBlogs";
 
 export default async function Home() {
-  // Fetching all blogs
   const allBlogs = await getAllBlogs();
-  // console.log(allBlogs);
 
   return (
     <main className="p-6 container mx-auto">
