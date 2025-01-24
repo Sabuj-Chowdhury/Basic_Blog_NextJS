@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <main className="p-6 container mx-auto">
-      <h1 className="text-center text-3xl mb-8">All Blogs</h1>
+      <h1 className="text-center text-5xl mb-8 ">All Blogs</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {allBlogs.map((blog) => (
