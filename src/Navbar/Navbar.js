@@ -14,6 +14,8 @@ const Navbar = () => {
 
   // console.log(alsoUser);
 
+  // ISSUE : tailwind utility class is not working on production or localhost!
+
   return (
     <nav className="bg-black text-white py-4 px-6 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
