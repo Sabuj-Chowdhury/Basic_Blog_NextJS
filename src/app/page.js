@@ -12,14 +12,13 @@ export default async function Home() {
         {allBlogs.map((blog) => (
           <div
             key={blog.id}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden h-32 w-full"
+            className="bg-white border rounded-lg shadow-lg overflow-hidden h-32 w-full"
           >
             {/* Blog Title */}
-            <div className="p-4 h-full flex flex-col justify-between">
-              {/* View Details Button */}
+            <div className="p-4 h-full">
               <Link
                 href={`/blog/${blog.id}`}
-                className=" text-black rounded-md text-center"
+                className=" text-black text-center"
               >
                 {blog.title}
               </Link>

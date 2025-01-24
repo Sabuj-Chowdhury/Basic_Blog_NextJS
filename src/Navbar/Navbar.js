@@ -12,7 +12,7 @@ const Navbar = () => {
   const { user, getUser } = useKindeBrowserClient();
   const alsoUser = getUser();
 
-  console.log(alsoUser);
+  // console.log(alsoUser);
 
   return (
     <nav className="bg-black text-white py-4 px-6 shadow-md">

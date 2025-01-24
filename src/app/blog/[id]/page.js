@@ -1,21 +1,19 @@
 import { getBlogById } from "../../../../utils/getBlogById";
 
 export default async function BlogPage({ params }) {
-  const { id } = params; // Extracting the ID from the URL params
-  const blog = await getBlogById(id); // Fetching the blog by ID
+  const { id } = await params;
+  const blog = await getBlogById(id);
 
   if (!blog) {
     return (
-      <div className="p-6 container mx-auto text-center text-white">
+      <div className="p-6 container mx-auto text-center text-black">
         <h1 className="text-3xl mb-8">Blog not found</h1>
       </div>
     );
   }
 
-  console.log(blog); // Check the fetched data in the console
-
   return (
-    <div className="p-6 container mx-auto bg-black text-white">
+    <div className="p-6 container mx-auto  text-black">
       <h1 className="text-center text-3xl mb-8">{blog.title}</h1>
 
       <div className="space-y-4">
